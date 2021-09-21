@@ -8,14 +8,13 @@ namespace TriangleTracker
     {
       if (sideOne == sideTwo && sideTwo == sideThree)
       {
-        Console.WriteLine($"is eq");
         return "equilateral";
       } 
-      else 
+      else if (sideOne == sideTwo || sideOne == sideThree || sideTwo == sideThree)
       {
-        Console.WriteLine($"not eq");
-        
-        return "not a triangle";
+        return "isosceles";
+      } else {
+         return "not a triangle";
       }
     }
   }

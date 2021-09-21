@@ -22,6 +22,16 @@ namespace TriangleTracker.Tests
       Assert.AreNotEqual("equilateral", TriangleTracker.TriangleType(1,1,2));
     }
     // Test if Isosceles: Exactly 2 sides are equal;
+     [TestMethod]
+     public void TriangleType_IsIsosceles_Isosceles()
+     {
+       Assert.AreEqual("isosceles", TriangleTracker.TriangleType(1,1,2));
+     }
+     [TestMethod]
+     public void TriangleType_IsIsosceles_NotIsosceles()
+     {
+       Assert.AreNotEqual("isosceles", TriangleTracker.TriangleType(1,3,2));
+     }
     // Test if Scalene: No sides are equal.
     // Test if it's not a triangle
     // edge cases? input: not an int, 
