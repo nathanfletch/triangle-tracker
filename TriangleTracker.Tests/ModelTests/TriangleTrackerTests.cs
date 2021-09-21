@@ -33,6 +33,16 @@ namespace TriangleTracker.Tests
        Assert.AreNotEqual("isosceles", TriangleTracker.TriangleType(1,3,2));
      }
     // Test if Scalene: No sides are equal.
+    [TestMethod]
+     public void TriangleType_IsScalene_Scalene()
+     {
+       Assert.AreEqual("scalene", TriangleTracker.TriangleType(4,3,2));
+     }
+    [TestMethod]
+     public void TriangleType_IsScalene_NotScalene()
+     {
+       Assert.AreNotEqual("scalene", TriangleTracker.TriangleType(3,3,2));
+     }
     // Test if it's not a triangle
     // edge cases? input: not an int, 
   }

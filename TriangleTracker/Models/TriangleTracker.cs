@@ -13,8 +13,13 @@ namespace TriangleTracker
       else if (sideOne == sideTwo || sideOne == sideThree || sideTwo == sideThree)
       {
         return "isosceles";
-      } else {
-         return "not a triangle";
+      } else if (sideOne != sideTwo && sideTwo != sideThree && sideThree != sideTwo)
+      {
+        return "scalene";
+      }
+      else
+      {
+        return "not a triangle";
       }
     }
   }
