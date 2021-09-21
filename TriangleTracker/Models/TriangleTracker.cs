@@ -4,7 +4,7 @@ namespace TriangleTracker
   {
     public static bool IsTriangle(int sideOne, int sideTwo, int sideThree)
     {
-      return false;
+      return sideOne == sideTwo && sideTwo == sideThree;
     }
   }
 }

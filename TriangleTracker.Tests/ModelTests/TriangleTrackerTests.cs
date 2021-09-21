@@ -13,6 +13,11 @@ namespace TriangleTracker.Tests
     {
       Assert.AreEqual(true, TriangleTracker.IsTriangle(1,1,1));
     }
+
+    public void IsTriangle_IsEquilateral_False()
+    {
+      Assert.AreEqual(false, TriangleTracker.IsTriangle(1,1,2));
+    }
     // Test if Isosceles: Exactly 2 sides are equal;
     // Test if Scalene: No sides are equal.
     // Test if it's not a triangle
