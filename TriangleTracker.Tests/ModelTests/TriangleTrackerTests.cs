@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TriangleTracker;
+using System;
 
 namespace TriangleTracker.Tests
 {
@@ -9,14 +10,16 @@ namespace TriangleTracker.Tests
     //static or instance method? static for now so we don't have to worry about instantiation
     [TestMethod]
     // Test if Equilateral: All sides are equal;
-    public void IsTriangle_IsEquilateral_True()
+    public void TriangleType_IsEquilateral_Equilateral()
     {
-      Assert.AreEqual(true, TriangleTracker.IsTriangle(1,1,1));
+      Assert.AreEqual("equilateral", TriangleTracker.TriangleType(1,1,1));
     }
-
-    public void IsTriangle_IsEquilateral_False()
+  [TestMethod]
+    public void TriangleType_IsEquilateral_NotEquilateral()
     {
-      Assert.AreEqual(false, TriangleTracker.IsTriangle(1,1,2));
+      Console.WriteLine($"testing not equilateral");
+      
+      Assert.AreNotEqual("equilateral", TriangleTracker.TriangleType(1,1,2));
     }
     // Test if Isosceles: Exactly 2 sides are equal;
     // Test if Scalene: No sides are equal.

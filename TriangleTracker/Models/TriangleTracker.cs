@@ -1,10 +1,22 @@
+using System;
+
 namespace TriangleTracker
 {
   public class TriangleTracker
   {
-    public static bool IsTriangle(int sideOne, int sideTwo, int sideThree)
+    public static string TriangleType(int sideOne, int sideTwo, int sideThree)
     {
-      return sideOne == sideTwo && sideTwo == sideThree;
+      if (sideOne == sideTwo && sideTwo == sideThree)
+      {
+        Console.WriteLine($"is eq");
+        return "equilateral";
+      } 
+      else 
+      {
+        Console.WriteLine($"not eq");
+        
+        return "not a triangle";
+      }
     }
   }
 }
