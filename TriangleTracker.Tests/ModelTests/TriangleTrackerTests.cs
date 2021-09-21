@@ -25,7 +25,7 @@ namespace TriangleTracker.Tests
      [TestMethod]
      public void TriangleType_IsIsosceles_Isosceles()
      {
-       Assert.AreEqual("isosceles", TriangleTracker.TriangleType(1,1,2));
+       Assert.AreEqual("isosceles", TriangleTracker.TriangleType(3,2,2));
      }
      [TestMethod]
      public void TriangleType_IsIsosceles_NotIsosceles()
@@ -43,6 +43,16 @@ namespace TriangleTracker.Tests
      {
        Assert.AreNotEqual("scalene", TriangleTracker.TriangleType(3,3,2));
      }
+      [TestMethod]
+     public void TriangleType_NotTriangle_NotTriangle()
+     {
+       Assert.AreEqual("not a triangle", TriangleTracker.TriangleType(3,4,8));
+     }
+    //   [TestMethod]
+    //  public void TriangleType_ErrorHandling_NotIntInput()
+    //  {
+    //    Assert.AreEqual("error", TriangleTracker.TriangleType("not", "a", "triangle"));
+    //  }
     // Test if it's not a triangle
     // edge cases? input: not an int, 
   }
